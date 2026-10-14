@@ -90,6 +90,14 @@ App.js          应用界面入口与状态协调
 2. `npm run build:web` 可以成功完成。
 3. 与 Windows 进程管理相关的改动经过隔离测试。
 
+## 如果觉得还可以的话，点个赞呗~
+
+有能力也可以请作者喝一杯奶茶，谢谢大家
+
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/aa464ab5-29a1-4161-9d97-c8b767220704" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/4f6dc615-4729-4af1-b147-81de3766dcc0" />
+
+
 ## 许可证
 
 本项目采用 [MIT License](./LICENSE)。
