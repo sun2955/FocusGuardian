@@ -2,6 +2,9 @@
 
 时之界是一款面向 Windows 的开源桌面时间管理工具。它通过识别当前前台应用、累计真实使用时长并执行每日额度，帮助用户减少娱乐软件带来的注意力消耗。
 
+## 页面截图
+<img width="1263" height="813" alt="image" src="https://github.com/user-attachments/assets/5898e020-3a76-4fa8-b5ec-2cd590007bf0" />
+
 ## 主要功能
 
 - 从当前运行的 Windows 应用中创建限制规则
