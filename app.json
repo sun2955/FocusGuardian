@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "时之界",
+    "slug": "focus-guardian",
+    "version": "0.5.1",
+    "icon": "./assets/icon.png",
+    "orientation": "landscape",
+    "userInterfaceStyle": "light",
+    "web": {
+      "bundler": "webpack",
+      "favicon": "./assets/icon.png"
+    }
+  }
+}

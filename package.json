@@ -1,0 +1,77 @@
+{
+  "name": "focus-guardian",
+  "version": "0.5.1",
+  "productName": "时之界",
+  "description": "帮助用户限制娱乐软件使用时间的桌面专注管理应用",
+  "author": "时之界",
+  "homepage": "./",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "web": "expo start --web",
+    "build:web": "expo export:web",
+    "desktop": "electron electron/main.js",
+    "pack:win": "npm run build:web && electron-builder --win nsis portable --x64"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@expo/vector-icons": "^13.0.0",
+    "@expo/webpack-config": "^18.0.1",
+    "electron": "^41.0.3",
+    "electron-builder": "^26.15.3",
+    "expo": "~48.0.21",
+    "expo-status-bar": "~1.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.14",
+    "react-native-svg": "13.4.0",
+    "react-native-web": "~0.18.10"
+  },
+  "build": {
+    "appId": "com.focusguardian.desktop",
+    "productName": "时之界",
+    "extraMetadata": {
+      "main": "electron/main.js",
+      "productName": "时之界"
+    },
+    "asar": true,
+    "npmRebuild": false,
+    "compression": "normal",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**/*",
+      "web-build/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "时之界"
+    }
+  }
+}

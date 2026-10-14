@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="%LANG_ISO_CODE%">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.00001, viewport-fit=cover" />
+    <title>%WEB_TITLE%</title>
+    <style>
+      html, body, #root { width: 100%; margin: 0; padding: 0; min-height: 100%; }
+      #root { flex-shrink: 0; flex-basis: auto; flex-grow: 1; display: flex; flex: 1; }
+      html { -webkit-text-size-adjust: 100%; height: 100%; }
+      body { display: flex; overflow-y: auto; overscroll-behavior-y: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; background: #f5f7fb; }
+      #app-splash { position: fixed; inset: 0; z-index: 99999; display: flex; align-items: center; justify-content: center; overflow: hidden; color: #fff; font-family: "Microsoft YaHei UI", "PingFang SC", system-ui, sans-serif; background: radial-gradient(circle at 50% 34%, #6267ee 0, #393aa4 32%, #171946 72%, #10122f 100%); opacity: 1; visibility: visible; transition: opacity .38s ease, visibility .38s ease; }
+      #app-splash::before, #app-splash::after { content: ""; position: absolute; border-radius: 50%; filter: blur(2px); opacity: .2; }
+      #app-splash::before { width: 460px; height: 460px; left: -180px; top: -220px; background: #9ca2ff; animation: splash-float 5s ease-in-out infinite; }
+      #app-splash::after { width: 380px; height: 380px; right: -150px; bottom: -210px; background: #7b61ff; animation: splash-float 6s ease-in-out infinite reverse; }
+      .splash-content { position: relative; z-index: 1; width: 330px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+      .splash-logo { position: relative; width: 100px; height: 100px; display: grid; place-items: center; }
+      .splash-orbit { position: absolute; inset: 0; border-radius: 50%; border: 3px solid rgba(255,255,255,.14); border-top-color: #fff; border-right-color: #aeb2ff; animation: splash-spin 1.25s cubic-bezier(.55,.2,.45,.8) infinite; }
+      .splash-orbit::after { content: ""; position: absolute; width: 9px; height: 9px; right: 8px; top: 8px; border-radius: 50%; background: #fff; box-shadow: 0 0 14px rgba(255,255,255,.9); }
+      .splash-mark { width: 68px; height: 68px; border-radius: 21px; display: grid; place-items: center; background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(226,228,255,.88)); box-shadow: 0 18px 45px rgba(5,6,38,.35); animation: splash-pulse 1.8s ease-in-out infinite; }
+      .splash-mark img { width: 68px; height: 68px; border-radius: 21px; object-fit: contain; }
+      .splash-title { margin-top: 24px; font-size: 23px; line-height: 1.3; font-weight: 800; letter-spacing: .08em; }
+      .splash-message { margin-top: 9px; color: rgba(239,240,255,.72); font-size: 12px; letter-spacing: .04em; }
+      .splash-progress { width: 180px; height: 4px; margin-top: 25px; border-radius: 4px; overflow: hidden; background: rgba(255,255,255,.14); }
+      .splash-progress span { display: block; width: 48%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, transparent, #fff, #b7bbff); animation: splash-progress 1.35s ease-in-out infinite; }
+      .splash-caption { margin-top: 13px; color: rgba(239,240,255,.48); font-size: 10px; }
+      #root > div:not(#app-splash) { animation: app-enter .32s ease-out both; }
+      @keyframes splash-spin { to { transform: rotate(360deg); } }
+      @keyframes splash-pulse { 0%,100% { transform: scale(.96); } 50% { transform: scale(1.03); } }
+      @keyframes splash-progress { 0% { transform: translateX(-120%); } 100% { transform: translateX(330%); } }
+      @keyframes splash-float { 0%,100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(26px,20px,0); } }
+      @keyframes app-enter { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+      @media (prefers-reduced-motion: reduce) { .splash-orbit, .splash-mark, .splash-progress span, #app-splash::before, #app-splash::after { animation: none; } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="app-splash" role="status" aria-live="polite">
+      <div class="splash-content">
+        <div class="splash-logo">
+          <div class="splash-orbit"></div>
+          <div class="splash-mark"><img src="./favicon.ico" alt="" aria-hidden="true" /></div>
+        </div>
+        <div class="splash-title">正在启动</div>
+        <div class="splash-message" id="splash-message">正在准备你的专注空间</div>
+        <div class="splash-progress"><span></span></div>
+        <div class="splash-caption">让时间回到真正重要的事情上</div>
+      </div>
+      </div>
+    </div>
+    <noscript>请启用 JavaScript 后重新打开应用。</noscript>
+  </body>
+</html>

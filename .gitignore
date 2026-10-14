@@ -1,0 +1,60 @@
+# Dependencies and package-manager caches
+node_modules/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Expo and local development state
+.expo/
+.expo-shared/
+.eas/
+.env
+.env.*
+!.env.example
+
+# Credentials, signing keys, and certificates
+.npmrc
+*.keystore
+*.jks
+*.p8
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+credentials.json
+
+# Build outputs and packaged applications
+web-build/
+release/
+dist/
+build/
+*.exe
+*.msi
+*.appx
+*.blockmap
+
+# Local databases, exports, logs, and runtime data
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.csv
+logs/
+*.log
+test-profile-*/
+test-data-*/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local previews and temporary files
+preview*.png
+*.tmp
+*.bak
